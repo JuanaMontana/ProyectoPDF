@@ -5,6 +5,8 @@
  */
 package proyecto;
 
+import java.io.IOException;
+
 /**
  *
  * @author Juan
@@ -12,8 +14,16 @@ package proyecto;
 public class Proyecto {
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hola Gonzalo");
-        System.out.println("funciono");
+        LecturaPdf lecturaPdf = new LecturaPdf();
+        lecturaPdf.setRutaDeArchivo("C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias\\G1U1.pdf");
+        
+        try{
+            String texto = lecturaPdf.toText();
+            System.out.println(texto);
+        }catch (IOException ex){
+            System.out.println(ex.getMessage());
+        }
+        
     }
     
 }
