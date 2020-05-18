@@ -13,6 +13,7 @@ import java.io.IOException;
  */
 public class Proyecto {
     public static void main(String[] args) {
+        Seleccionar seleccionar = new Seleccionar();
         // TODO code application logic here
         LecturaPdf lecturaPdf = new LecturaPdf();
         lecturaPdf.setRutaDeArchivo("C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias\\G1U1.pdf");
