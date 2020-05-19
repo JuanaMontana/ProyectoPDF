@@ -153,8 +153,7 @@ public class Seleccionar extends javax.swing.JFrame {
         if(archivo != null){
             ruta.setText(archivo.getAbsolutePath());
             System.out.println(ruta.getText());
-        }
-        
+        }    
     }//GEN-LAST:event_abrirActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
