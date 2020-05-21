@@ -16,6 +16,7 @@ public class Proyecto {
         // TODO code application logic here
         LecturaPdf lecturaPdf = new LecturaPdf();
         lecturaPdf.setRutaDeArchivo("C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias\\G1U1.pdf");
+        System.out.println("sebita");
         
         try{
             String texto = lecturaPdf.toText();
