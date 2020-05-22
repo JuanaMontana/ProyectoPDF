@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.MenuInicialController">
+   <effect>
+      <ColorAdjust />
+   </effect>
+   <children>
+      <Button fx:id="botonRedo" layoutX="628.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRedo" prefHeight="131.0" prefWidth="136.0" text="redo">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/redo.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="botonUndo" layoutX="402.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleUndo" prefHeight="60.0" prefWidth="149.0" text="undo">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/undo.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>
