@@ -21,8 +21,6 @@ import javafx.scene.layout.AnchorPane;
 public class MenuInicialController implements Initializable {
     
     
-    
-    
     @FXML
     private AnchorPane root;
     @FXML
