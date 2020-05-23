@@ -27,5 +27,6 @@
                </image>
             </ImageView>
          </graphic></Button>
+      <ImageView fx:id="imagenPDF" fitHeight="544.0" fitWidth="896.0" layoutX="154.0" layoutY="172.0" onDragDetected="#handleImagenPdf" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

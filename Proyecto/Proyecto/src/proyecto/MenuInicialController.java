@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -27,6 +29,8 @@ public class MenuInicialController implements Initializable {
     private Button botonRedo;
     @FXML
     private Button botonUndo;
+    @FXML
+    private ImageView imagenPDF;
     
     
     /**
@@ -44,6 +48,10 @@ public class MenuInicialController implements Initializable {
 
     @FXML
     private void handleUndo(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleImagenPdf(MouseEvent event) {
     }
 }
     
