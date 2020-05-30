@@ -54,10 +54,9 @@ public class Proyecto extends Application {
                 new Seleccionar().setVisible(true);
             }
         });
-        System.out.println("hola");
         
         // TODO code application logic here
-        //launch(args);
+        launch(args);
         
         
         
