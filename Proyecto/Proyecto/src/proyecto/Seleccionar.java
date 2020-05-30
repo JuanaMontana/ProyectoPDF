@@ -42,7 +42,7 @@ public class Seleccionar extends javax.swing.JFrame {
         ruta = new javax.swing.JTextField();
         abrir = new javax.swing.JButton();
         aceptar = new javax.swing.JButton();
-        rutaDestino = new javax.swing.JTextField();
+        ruta1 = new javax.swing.JTextField();
         destino = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -89,11 +89,11 @@ public class Seleccionar extends javax.swing.JFrame {
             }
         });
 
-        rutaDestino.setBackground(new java.awt.Color(204, 204, 255));
-        rutaDestino.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        rutaDestino.addActionListener(new java.awt.event.ActionListener() {
+        ruta1.setBackground(new java.awt.Color(204, 204, 255));
+        ruta1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        ruta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rutaDestinoActionPerformed(evt);
+                ruta1ActionPerformed(evt);
             }
         });
 
@@ -119,7 +119,7 @@ public class Seleccionar extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rutaDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(destino)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -133,7 +133,7 @@ public class Seleccionar extends javax.swing.JFrame {
                     .addComponent(abrir))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rutaDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(destino))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(aceptar)
@@ -182,7 +182,7 @@ public class Seleccionar extends javax.swing.JFrame {
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         try {
             String rutaArchivo = ruta.getText();
-            String destinoimagen = "C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias";
+            String destinoimagen = ruta1.getText();
 
             File rutaArchivos = new File(rutaArchivo);
             File destinoArchivo = new File(destinoimagen);
@@ -216,12 +216,17 @@ public class Seleccionar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_aceptarActionPerformed
 
-    private void rutaDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaDestinoActionPerformed
+    private void ruta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruta1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rutaDestinoActionPerformed
+    }//GEN-LAST:event_ruta1ActionPerformed
 
     private void destinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_destinoActionPerformed
-     
+        JFileChooser jf = new JFileChooser();
+        jf.showOpenDialog(this);
+        File archivo = jf.getSelectedFile();
+        if(archivo != null){
+            ruta1.setText(archivo.getAbsolutePath());
+        }
     }//GEN-LAST:event_destinoActionPerformed
 
     /**
@@ -267,6 +272,6 @@ public class Seleccionar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField ruta;
-    private javax.swing.JTextField rutaDestino;
+    private javax.swing.JTextField ruta1;
     // End of variables declaration//GEN-END:variables
 }
