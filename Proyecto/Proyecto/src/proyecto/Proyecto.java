@@ -5,26 +5,15 @@
  */
 package proyecto;
 
-import java.io.IOException;
 
 /**
  *
  * @author Juan
  */
 public class Proyecto {
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        LecturaPdf lecturaPdf = new LecturaPdf();
-        lecturaPdf.setRutaDeArchivo("C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias\\G1U1.pdf");
-        System.out.println("sebita");
-        
-        try{
-            String texto = lecturaPdf.toText();
-            System.out.println(texto);
-        }catch (IOException ex){
-            System.out.println(ex.getMessage());
-        }
-        
+        Seleccionar();
     }
-    
+
 }

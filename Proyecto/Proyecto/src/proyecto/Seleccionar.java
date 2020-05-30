@@ -5,13 +5,18 @@
  */
 package proyecto;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
 
 /**
  *
@@ -157,13 +162,38 @@ public class Seleccionar extends javax.swing.JFrame {
     }//GEN-LAST:event_abrirActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-        LecturaPdf lectura = new LecturaPdf();
-        lectura.setRutaDeArchivo(ruta.getText());
-        
-        try{
-            String texto = lectura.toText();
-            System.out.println(texto);
-        }catch (IOException ex){
+        try {
+            String rutaArchivo = ruta.getText();
+            String destinoimagen = "C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias";
+     
+            File rutaArchivos = new File(rutaArchivo);
+            File destinoArchivo = new File(destinoimagen);
+            if(!destinoArchivo.exists()){
+                destinoArchivo.mkdir();
+                System.out.println("Carpeta Creada "+ destinoArchivo.getAbsolutePath());
+            }
+            if(rutaArchivos.exists()){
+                System.out.println("Imagen copidada en la carpeta "+ destinoArchivo.getName());
+                PDDocument documento = PDDocument.load(rutaArchivo);
+                List<PDPage> lista = documento.getDocumentCatalog().getAllPages();
+                System.out.println("Total de archivos para convertir "+ lista.size());
+                
+                String nombreArchivo = rutaArchivos.getName().replace(".pdf", "");
+                int numeroPaginas = 1;
+                for (PDPage page : lista){
+                    BufferedImage imagen = page.convertToImage();
+                    File salidaImagen = new File(destinoimagen + nombreArchivo + "_" + numeroPaginas+ ".png");
+                    System.out.println("imagen creada: "+salidaImagen.getName());
+                    ImageIO.write(imagen, "png", salidaImagen);
+                    numeroPaginas=numeroPaginas+1;
+                }
+                documento.close();
+                System.out.println("imagenes guardadas en : "+ destinoArchivo.getAbsolutePath());
+            } else {
+                System.err.println(rutaArchivos.getName() + "no existe");
+            }
+
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }//GEN-LAST:event_aceptarActionPerformed
