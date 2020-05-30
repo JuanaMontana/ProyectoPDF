@@ -11,6 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -33,19 +37,27 @@ public class Proyecto extends Application {
     
     
     public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Proyecto.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InstantiationException ex) {
+                    Logger.getLogger(Proyecto.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IllegalAccessException ex) {
+                    Logger.getLogger(Proyecto.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (UnsupportedLookAndFeelException ex) {
+                    Logger.getLogger(Proyecto.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                new Seleccionar().setVisible(true);
+            }
+        });
+        System.out.println("hola");
+        
         // TODO code application logic here
-        
-        LecturaPdf lecturaPdf = new LecturaPdf();
-        lecturaPdf.setRutaDeArchivo("C:\\Users\\Juan\\Desktop\\2939-160-SE20.pdf");
-        
-        try{
-            String texto = lecturaPdf.toText();
-            System.out.println(texto);
-        }catch (IOException ex){
-            System.out.println(ex.getMessage());
-        }
-        
-        launch(args);
+        //launch(args);
         
         
         

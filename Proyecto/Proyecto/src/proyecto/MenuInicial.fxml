@@ -15,7 +15,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Imagenes/redo.png" />
+                  <Image url="@../Imagenes/redo.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -23,10 +23,10 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Imagenes/undo.png" />
+                  <Image url="@../Imagenes/undo.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <ImageView fx:id="imagenPDF" fitHeight="544.0" fitWidth="896.0" layoutX="154.0" layoutY="172.0" onDragDetected="#handleImagenPdf" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagenPDF" fitHeight="544.0" fitWidth="896.0" layoutX="159.0" layoutY="172.0" onDragDetected="#handleImagenPdf" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

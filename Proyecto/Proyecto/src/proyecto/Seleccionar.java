@@ -192,7 +192,7 @@ public class Seleccionar extends javax.swing.JFrame {
             }
             if(rutaArchivos.exists()){
                 System.out.println("Imagen copidada en la carpeta "+ destinoArchivo.getName());
-                PDDocument documento = PDDocument.load(rutaArchivo);
+                PDDocument documento = PDDocument.load(rutaArchivos);
                 List<PDPage> lista = documento.getDocumentCatalog().getAllPages();
                 System.out.println("Total de archivos para convertir "+ lista.size());
 
