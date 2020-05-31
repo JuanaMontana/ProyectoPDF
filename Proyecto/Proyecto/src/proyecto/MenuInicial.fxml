@@ -15,7 +15,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagenes/redo.png" />
+                  <Image url="@redo.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -23,7 +23,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagenes/undo.png" />
+                  <Image url="@undo.png" />
                </image>
             </ImageView>
          </graphic></Button>
