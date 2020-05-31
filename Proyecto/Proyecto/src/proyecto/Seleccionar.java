@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -17,6 +18,12 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
+=======
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDDocument;
+>>>>>>> Juana
 
 /**
  *
@@ -29,7 +36,10 @@ public class Seleccionar extends javax.swing.JFrame {
      */
     public Seleccionar() {
         initComponents();
+<<<<<<< HEAD
         this.setLocationRelativeTo(null);
+=======
+>>>>>>> Juana
     }
 
     /**
@@ -42,11 +52,16 @@ public class Seleccionar extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+<<<<<<< HEAD
         jLabel1 = new javax.swing.JLabel();
+=======
+        jLabel2 = new javax.swing.JLabel();
+>>>>>>> Juana
         jPanel2 = new javax.swing.JPanel();
         ruta = new javax.swing.JTextField();
         abrir = new javax.swing.JButton();
         aceptar = new javax.swing.JButton();
+<<<<<<< HEAD
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +70,28 @@ public class Seleccionar extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Seleccione el archivo PDF");
+=======
+        ruta1 = new javax.swing.JTextField();
+        destino = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Seleccione el archivo PDF");
+>>>>>>> Juana
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -68,7 +105,11 @@ public class Seleccionar extends javax.swing.JFrame {
         });
 
         abrir.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+<<<<<<< HEAD
         abrir.setText("abrir");
+=======
+        abrir.setText("Explorar");
+>>>>>>> Juana
         abrir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 abrirActionPerformed(evt);
@@ -82,18 +123,52 @@ public class Seleccionar extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
+=======
+        ruta1.setBackground(new java.awt.Color(204, 204, 255));
+        ruta1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        ruta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ruta1ActionPerformed(evt);
+            }
+        });
+
+        destino.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        destino.setText("Destino");
+        destino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                destinoActionPerformed(evt);
+            }
+        });
+
+>>>>>>> Juana
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(ruta, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ruta, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+>>>>>>> Juana
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(abrir)
                     .addComponent(aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32))
+<<<<<<< HEAD
+=======
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(destino)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> Juana
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,6 +178,7 @@ public class Seleccionar extends javax.swing.JFrame {
                     .addComponent(ruta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(abrir))
                 .addGap(18, 18, 18)
+<<<<<<< HEAD
                 .addComponent(aceptar)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
@@ -126,6 +202,14 @@ public class Seleccionar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(23, Short.MAX_VALUE))
+=======
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ruta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(destino))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(aceptar)
+                .addContainerGap())
+>>>>>>> Juana
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -133,13 +217,29 @@ public class Seleccionar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 26, Short.MAX_VALUE))
+=======
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 598, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> Juana
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> Juana
                 .addContainerGap())
         );
 
@@ -148,7 +248,10 @@ public class Seleccionar extends javax.swing.JFrame {
 
     private void rutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 
+=======
+>>>>>>> Juana
     }//GEN-LAST:event_rutaActionPerformed
 
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
@@ -158,14 +261,23 @@ public class Seleccionar extends javax.swing.JFrame {
         if(archivo != null){
             ruta.setText(archivo.getAbsolutePath());
             System.out.println(ruta.getText());
+<<<<<<< HEAD
         }    
+=======
+        }
+>>>>>>> Juana
     }//GEN-LAST:event_abrirActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         try {
             String rutaArchivo = ruta.getText();
+<<<<<<< HEAD
             String destinoimagen = "C:\\Users\\yayox\\Downloads\\Calculo 1 PDFS y guias";
      
+=======
+            String destinoimagen = ruta1.getText();
+
+>>>>>>> Juana
             File rutaArchivos = new File(rutaArchivo);
             File destinoArchivo = new File(destinoimagen);
             if(!destinoArchivo.exists()){
@@ -174,10 +286,17 @@ public class Seleccionar extends javax.swing.JFrame {
             }
             if(rutaArchivos.exists()){
                 System.out.println("Imagen copidada en la carpeta "+ destinoArchivo.getName());
+<<<<<<< HEAD
                 PDDocument documento = PDDocument.load(rutaArchivo);
                 List<PDPage> lista = documento.getDocumentCatalog().getAllPages();
                 System.out.println("Total de archivos para convertir "+ lista.size());
                 
+=======
+                PDDocument documento = PDDocument.load(rutaArchivos);
+                List<PDPage> lista = documento.getDocumentCatalog().getAllPages();
+                System.out.println("Total de archivos para convertir "+ lista.size());
+
+>>>>>>> Juana
                 String nombreArchivo = rutaArchivos.getName().replace(".pdf", "");
                 int numeroPaginas = 1;
                 for (PDPage page : lista){
@@ -198,6 +317,22 @@ public class Seleccionar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_aceptarActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void ruta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ruta1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ruta1ActionPerformed
+
+    private void destinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_destinoActionPerformed
+        JFileChooser jf = new JFileChooser();
+        jf.showOpenDialog(this);
+        File archivo = jf.getSelectedFile();
+        if(archivo != null){
+            ruta1.setText(archivo.getAbsolutePath());
+        }
+    }//GEN-LAST:event_destinoActionPerformed
+
+>>>>>>> Juana
     /**
      * @param args the command line arguments
      */
@@ -228,6 +363,7 @@ public class Seleccionar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+<<<<<<< HEAD
                 try {
                     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 } catch (ClassNotFoundException ex) {
@@ -239,6 +375,8 @@ public class Seleccionar extends javax.swing.JFrame {
                 } catch (UnsupportedLookAndFeelException ex) {
                     Logger.getLogger(Seleccionar.class.getName()).log(Level.SEVERE, null, ex);
                 }
+=======
+>>>>>>> Juana
                 new Seleccionar().setVisible(true);
             }
         });
@@ -247,9 +385,18 @@ public class Seleccionar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton abrir;
     private javax.swing.JButton aceptar;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField ruta;
+=======
+    private javax.swing.JButton destino;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField ruta;
+    private javax.swing.JTextField ruta1;
+>>>>>>> Juana
     // End of variables declaration//GEN-END:variables
 }
